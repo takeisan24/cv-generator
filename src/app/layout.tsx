@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vutuananh.vercel.app"),
   title: `${personal.name} — ${personal.role}`,
   description: personal.tagline,
   keywords: [
