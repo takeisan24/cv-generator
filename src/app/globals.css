@@ -110,4 +110,13 @@ body {
     color: #000 !important;
     font-size: 11pt;
   }
+  /* Bản CV thiết kế: giữ nguyên màu sakura + nền khi in */
+  .cv-design,
+  .cv-design * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .cv-avoid-break {
+    break-inside: avoid;
+  }
 }
