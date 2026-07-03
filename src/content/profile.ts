@@ -204,6 +204,8 @@ export const education = {
   school: "Trường Đại học Giao thông Vận tải",
   major: "Công nghệ thông tin",
   period: "Tốt nghiệp 2026",
+  // Để trống -> không hiển thị GPA (chiến lược: dự án gánh CV).
+  // Nếu sau này GPA >= [REDACTED] thì điền lại, vd: "GPA [REDACTED].0".
   gpa: "[REDACTED]",
 };
 

@@ -117,7 +117,9 @@ export default function CvPage() {
               {education.period}
             </p>
           </div>
-          <p className="text-sm text-muted-foreground">{education.gpa}</p>
+          {education.gpa && (
+            <p className="text-sm text-muted-foreground">{education.gpa}</p>
+          )}
         </section>
       </main>
     </>

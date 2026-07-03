@@ -17,7 +17,9 @@ const facts = [
   {
     icon: GraduationCap,
     title: education.school,
-    desc: `${education.major} · ${education.period} · ${education.gpa}`,
+    desc: [education.major, education.period, education.gpa]
+      .filter(Boolean)
+      .join(" · "),
   },
 ];
 
