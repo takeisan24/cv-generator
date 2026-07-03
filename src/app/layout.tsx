@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "vi_VN",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: `${personal.name} — ${personal.role}`,
+    description: personal.tagline,
+  },
   robots: { index: true, follow: true },
 };
 

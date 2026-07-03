@@ -42,7 +42,7 @@ export function Contact() {
               <button
                 onClick={copyEmail}
                 className="group mt-1 inline-flex items-center gap-2 text-lg font-semibold transition-colors hover:text-primary"
-                aria-label="Sao chép email"
+                aria-label={`Sao chép email ${getEmail()}`}
               >
                 <Mail className="h-5 w-5 text-primary" />
                 {getEmail()}

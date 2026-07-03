@@ -14,7 +14,8 @@ export const personal = {
 
   // Liên hệ — phone & địa chỉ chỉ dùng cho CV PDF, KHÔNG render thô trên web công khai
   email: "vutanh507@gmail.com",
-  phone: "[REDACTED]", // chỉ hiển thị ở trang /cv
+  // Số điện thoại chỉ hiển thị trên /cv, render phía client để tránh bot —
+  // giá trị nằm trong src/components/phone-reveal.tsx (không đưa vào HTML tĩnh).
   links: {
     github: "https://github.com/takeisan24",
     linkedin: "https://www.linkedin.com/in/tu%E1%BA%A5n-anh-v%C5%A9-2a1536415/",
