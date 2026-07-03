@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CvToolbar } from "@/components/cv-toolbar";
+import { PhoneReveal } from "@/components/phone-reveal";
 import {
   personal,
   summary,
@@ -35,7 +36,7 @@ export default function CvPage() {
             {personal.role} · {personal.roleSub}
           </p>
           <p className="mt-2 text-sm text-muted-foreground">
-            {personal.email} · {personal.phone} · {personal.location}
+            {personal.email} · <PhoneReveal /> · {personal.location}
           </p>
           <p className="text-sm text-muted-foreground">
             github.com/takeisan24 · LinkedIn: Tuấn Anh Vũ
