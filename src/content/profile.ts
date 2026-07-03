@@ -6,11 +6,13 @@
 export const personal = {
   name: "Vũ Tuấn Anh",
   // Vai trò chính hiển thị ở Hero & CV
-  role: "Fullstack Web Developer",
-  roleSub: "Frontend-leaning · Web & Mobile",
+  role: "Frontend Developer",
+  roleSub: "React · Next.js · React Native — hướng Fullstack",
   tagline:
     "Sinh viên CNTT sắp tốt nghiệp. Mình xây sản phẩm web & mobile tích hợp AI — từ con bot Discord 82 lệnh đến nền tảng có thanh toán VietQR.",
   location: "Hà Nội, Việt Nam",
+  avatar: "/avatar.jpg",
+  availability: "Sẵn sàng đi làm ngay · Onsite hoặc Remote",
 
   // Liên hệ — phone & địa chỉ chỉ dùng cho CV PDF, KHÔNG render thô trên web công khai
   email: "vutanh507@gmail.com",
@@ -47,6 +49,10 @@ export const skills: { group: string; items: string[] }[] = [
   {
     group: "Công cụ & Quy trình",
     items: ["Git / GitHub", "Vercel", "Playwright (E2E)", "Zustand", "Zod", "Sentry"],
+  },
+  {
+    group: "Ngoại ngữ",
+    items: ["Tiếng Anh — giao tiếp & đọc/viết tài liệu kỹ thuật tốt"],
   },
 ];
 
@@ -124,7 +130,10 @@ export const projects: Project[] = [
     role: "Tác giả & lập trình viên duy nhất",
     year: "2026",
     tech: ["discord.js v14", "Supabase / PostgreSQL", "Google Gemini", "Node.js", "Next.js"],
-    links: [{ label: "GitHub", href: "https://github.com/takeisan24/waguri-bot" }],
+    links: [
+      { label: "Demo", href: "https://waguri-bot.vercel.app" },
+      { label: "GitHub", href: "https://github.com/takeisan24/waguri-bot" },
+    ],
     problem:
       "Các cộng đồng Discord Việt thiếu một bot kinh tế/nhập vai thực sự bản địa hóa, có chiều sâu và cân bằng — phần lớn là bot ngoại, nội dung tiếng Anh, dễ lạm phát điểm.",
     solution:
@@ -136,11 +145,11 @@ export const projects: Project[] = [
       "Kèm web dashboard Next.js: bảng xếp hạng, quản lý Premium.",
     ],
     result:
-      "Một sản phẩm quy mô lớn do một người xây dựng, thể hiện tư duy hệ thống: thiết kế kinh tế ảo, xử lý đồng thời và chống lạm phát.",
+      "Sản phẩm đang vận hành thật với 7 máy chủ Discord và 743 thành viên sử dụng — một hệ thống quy mô lớn do một người xây dựng, thể hiện tư duy thiết kế kinh tế ảo, xử lý đồng thời và chống lạm phát.",
     highlights: [
+      "Đang chạy thật: 7 máy chủ · 743 thành viên",
       "82 lệnh, hệ kinh tế chống lạm phát nhiều tầng",
       "AI persona (Gemini) + Premium thanh toán VietQR",
-      "Game nhiều người: Ma Sói, Loto, Bingo, bang hội PvP",
     ],
   },
   {
@@ -153,7 +162,10 @@ export const projects: Project[] = [
     role: "Đồ án tốt nghiệp — lập trình viên",
     year: "2026",
     tech: ["Next.js 14", "Supabase", "Gemini + OpenAI", "Zustand", "Playwright", "next-intl"],
-    links: [{ label: "GitHub", href: "https://github.com/takeisan24/graduation-project" }],
+    links: [
+      { label: "Demo", href: "https://graduation-project-alpha-dun.vercel.app" },
+      { label: "GitHub", href: "https://github.com/takeisan24/graduation-project" },
+    ],
     problem:
       "Người sáng tạo nội dung thường 'bí ý tưởng' và phải quản lý nội dung rời rạc trên nhiều nền tảng mạng xã hội cùng lúc.",
     solution:
@@ -164,10 +176,10 @@ export const projects: Project[] = [
       "Quản lý state bằng Zustand, hỗ trợ đa ngôn ngữ (next-intl), viết kiểm thử E2E với Playwright.",
     ],
     result:
-      "Đồ án tốt nghiệp hoàn chỉnh dưới sự hướng dẫn của giảng viên, code đạt chuẩn production với validation, đa ngôn ngữ và kiểm thử tự động.",
+      "Đồ án tốt nghiệp đạt 8.8/10 (3.8/4), code chuẩn production với validation, đa ngôn ngữ và kiểm thử tự động.",
     highlights: [
+      "Điểm đồ án tốt nghiệp: 8.8/10 (3.8/4)",
       "Sinh nội dung đa nền tảng bằng Gemini + OpenAI",
-      "Lịch đăng bài trực quan + chatbot trợ lý",
       "Có kiểm thử E2E (Playwright) & đa ngôn ngữ",
     ],
   },

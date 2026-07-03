@@ -41,6 +41,9 @@ export default function CvPage() {
           <p className="text-sm text-muted-foreground">
             github.com/takeisan24 · LinkedIn: Tuấn Anh Vũ
           </p>
+          <p className="mt-1 text-sm font-medium text-primary">
+            {personal.availability}
+          </p>
         </header>
 
         {/* Tóm tắt */}

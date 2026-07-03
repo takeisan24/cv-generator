@@ -73,7 +73,12 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-primary"
                     >
-                      <Github className="h-4 w-4" /> {l.label}
+                      {l.label === "GitHub" ? (
+                        <Github className="h-4 w-4" />
+                      ) : (
+                        <ArrowUpRight className="h-4 w-4" />
+                      )}{" "}
+                      {l.label}
                     </a>
                   ))}
                 </div>

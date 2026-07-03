@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Github } from "@/components/icons";
+import { ArrowLeft, ArrowUpRight, Github } from "@/components/icons";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Badge } from "@/components/ui/badge";
@@ -86,7 +86,12 @@ export default async function ProjectPage({
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary"
                 >
-                  <Github className="h-4 w-4" /> {l.label}
+                  {l.label === "GitHub" ? (
+                    <Github className="h-4 w-4" />
+                  ) : (
+                    <ArrowUpRight className="h-4 w-4" />
+                  )}{" "}
+                  {l.label}
                 </a>
               ))}
             </div>
