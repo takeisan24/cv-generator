@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { summary, education } from "@/content/profile";
+import { summary, education, stats, interests } from "@/content/profile";
 import { GraduationCap, Sparkles, Code2 } from "@/components/icons";
 
 const facts = [
@@ -58,6 +58,27 @@ export function About() {
             ))}
           </div>
         </div>
+
+        {/* Dải số liệu thật */}
+        <Reveal delay={0.1}>
+          <div className="mt-10 grid grid-cols-2 gap-4 rounded-xl border border-border bg-card p-6 sm:grid-cols-4">
+            {stats.map((s) => (
+              <div key={s.label} className="text-center">
+                <p className="text-2xl font-bold text-primary sm:text-3xl">
+                  {s.value}
+                </p>
+                <p className="mt-1 text-xs text-muted-foreground sm:text-sm">
+                  {s.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        {/* Sở thích — chút cá tính */}
+        <Reveal delay={0.15}>
+          <p className="mt-6 text-sm text-muted-foreground">{interests}</p>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, Github } from "@/components/icons";
 import { SiteHeader } from "@/components/site-header";
@@ -96,6 +97,18 @@ export default async function ProjectPage({
               ))}
             </div>
           </header>
+
+          {project.screenshot && (
+            <div className="mt-8 overflow-hidden rounded-xl border border-border shadow-lg">
+              <Image
+                src={project.screenshot}
+                alt={`Ảnh chụp giao diện ${project.name}`}
+                width={1280}
+                height={800}
+                className="w-full"
+              />
+            </div>
+          )}
 
           <div className="mt-8 space-y-8">
             {project.problem && (

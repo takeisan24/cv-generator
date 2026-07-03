@@ -29,6 +29,17 @@ export const personal = {
 export const summary =
   "Lập trình viên web hướng Frontend, thành thạo TypeScript, Next.js/React và React Native. Có kinh nghiệm thực tế trong môi trường team (Git, CI/CD, Sentry, kiểm thử E2E) và đã tự xây nhiều sản phẩm hoàn chỉnh từ ý tưởng tới vận hành. Chủ động học nhanh, chú trọng trải nghiệm người dùng và chất lượng code.";
 
+// Số liệu nổi bật — đều là con số THẬT, dùng cho dải thống kê ở mục Giới thiệu.
+export const stats = [
+  { value: "82", label: "lệnh trong Waguri Bot" },
+  { value: "743", label: "người dùng thật" },
+  { value: "200+", label: "commits (ContentScheduleAI)" },
+  { value: "8.8/10", label: "điểm đồ án tốt nghiệp" },
+];
+
+// Sở thích — chỉ hiển thị trên website để thêm chút cá tính (không đưa vào CV).
+export const interests = "Ngoài giờ code: chơi guitar 🎸 và xem anime.";
+
 // ---------------------------------------------------------------
 //  KỸ NĂNG
 // ---------------------------------------------------------------
@@ -111,6 +122,7 @@ export type Project = {
   year: string;
   tech: string[];
   links: { label: string; href: string }[];
+  screenshot?: string; // ảnh chụp sản phẩm cho case study
   // Nội dung case study (chỉ dùng cho dự án featured)
   problem?: string;
   solution?: string;
@@ -134,6 +146,7 @@ export const projects: Project[] = [
       { label: "Demo", href: "https://waguri-bot.vercel.app" },
       { label: "GitHub", href: "https://github.com/takeisan24/waguri-bot" },
     ],
+    screenshot: "/projects/waguri.png",
     problem:
       "Các cộng đồng Discord Việt thiếu một bot kinh tế/nhập vai thực sự bản địa hóa, có chiều sâu và cân bằng — phần lớn là bot ngoại, nội dung tiếng Anh, dễ lạm phát điểm.",
     solution:
@@ -166,6 +179,7 @@ export const projects: Project[] = [
       { label: "Demo", href: "https://graduation-project-alpha-dun.vercel.app" },
       { label: "GitHub", href: "https://github.com/takeisan24/graduation-project" },
     ],
+    screenshot: "/projects/creatorhub.png",
     problem:
       "Người sáng tạo nội dung thường 'bí ý tưởng' và phải quản lý nội dung rời rạc trên nhiều nền tảng mạng xã hội cùng lúc.",
     solution:
