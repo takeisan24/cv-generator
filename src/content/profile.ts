@@ -9,7 +9,7 @@ export const personal = {
   role: "Frontend Developer",
   roleSub: "React · Next.js · React Native — hướng Fullstack",
   tagline:
-    "Sinh viên CNTT sắp tốt nghiệp. Mình xây sản phẩm web & mobile tích hợp AI — từ con bot Discord 82 lệnh đến nền tảng có thanh toán VietQR.",
+    "Sinh viên CNTT sắp tốt nghiệp. Đã đóng góp ~293 Pull Request vào một nền tảng Proptech đang chạy production (web + mobile), và tự xây sản phẩm AI có người dùng thật.",
   location: "Hà Nội, Việt Nam",
   avatar: "/avatar.jpg",
   availability: "Sẵn sàng đi làm ngay · Onsite hoặc Remote",
@@ -27,13 +27,13 @@ export const personal = {
 
 // Tóm tắt bản thân (Hero/About + CV summary)
 export const summary =
-  "Lập trình viên web hướng Frontend, thành thạo TypeScript, Next.js/React và React Native. Có kinh nghiệm thực tế trong môi trường team (Git, CI/CD, Sentry, kiểm thử E2E) và đã tự xây nhiều sản phẩm hoàn chỉnh từ ý tưởng tới vận hành. Chủ động học nhanh, chú trọng trải nghiệm người dùng và chất lượng code.";
+  "Lập trình viên Frontend (Web & Mobile) thành thạo TypeScript, Next.js/React và React Native/Expo. Đã đóng góp gần 300 Pull Request và hơn 1.400 commits vào một nền tảng Proptech đang chạy production (cả web lẫn mobile), đồng thời tự xây nhiều sản phẩm hoàn chỉnh có người dùng thật. Chú trọng chất lượng code, kiểm thử và trải nghiệm người dùng.";
 
 // Số liệu nổi bật — đều là con số THẬT, dùng cho dải thống kê ở mục Giới thiệu.
 export const stats = [
-  { value: "82", label: "lệnh trong Waguri Bot" },
-  { value: "743", label: "người dùng thật" },
-  { value: "200+", label: "commits (ContentScheduleAI)" },
+  { value: "293", label: "Pull Request trong sản phẩm production" },
+  { value: "1.400+", label: "commits code" },
+  { value: "743", label: "người dùng thật (Waguri Bot)" },
   { value: "8.8/10", label: "điểm đồ án tốt nghiệp" },
 ];
 
@@ -81,17 +81,19 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    role: "Thực tập sinh / CTV Lập trình Web (Frontend)",
-    org: "Công ty công nghệ — lĩnh vực Proptech",
-    period: "03/2026 – 05/2026",
+    role: "Thực tập sinh / CTV Lập trình Frontend (Web & Mobile)",
+    org: "Công ty công nghệ — nền tảng Proptech (marketing & quản lý nguồn hàng BĐS cho môi giới, web + mobile)",
+    period: "03/2026 – 06/2026",
     summary:
-      "Phát triển giao diện cho một nền tảng bất động sản trên cả web và mobile, làm việc theo quy trình team chuyên nghiệp.",
+      "Phát triển tính năng trong hệ thống production trên cả mobile app và web app cho môi giới bất động sản.",
     bullets: [
-      "Xây dựng giao diện (UI) cho nền tảng bất động sản trên web (Next.js/React) và mobile (React Native/Expo, NativeWind).",
-      "Làm việc trong môi trường team có quy trình chuẩn: Git, code review, CI/CD, giám sát lỗi với Sentry và kiểm thử E2E bằng Playwright.",
-      "Phối hợp chặt với backend qua hợp đồng API, đảm bảo giao diện đồng nhất giữa web và ứng dụng di động.",
+      "Đóng góp ~293 Pull Request (265 đã merge), hơn 1.400 commits và 3.500+ file thay đổi trên 2 repo web + mobile chỉ trong 4 tháng.",
+      "Xây dựng các luồng sản phẩm chính: onboarding, tạo nội dung bằng AI (Gemini), quản lý chiến dịch, quản lý chính sách.",
+      "Triển khai UI mobile theo Figma bằng React Native/Expo: màn tạo/chỉnh sửa bất động sản nhiều bước, upload ảnh, địa chỉ, thông tin pháp lý, microsite, lịch sử giao dịch.",
+      "Đồng bộ contract giữa mobile – web – backend: API payload, migration, field mapping, trạng thái loading/error, validation và backward compatibility.",
+      "Bổ sung test, kiểm tra i18n, typecheck, lint/diff-check và review PR trước khi merge để giảm regression trên các flow quan trọng.",
     ],
-    tech: ["Next.js", "React", "React Native", "Expo", "NativeWind", "Tailwind CSS", "Supabase"],
+    tech: ["React Native", "Expo", "Next.js", "TypeScript", "Supabase / Postgres", "Zustand", "Tailwind / shadcn", "i18n", "Gemini AI"],
   },
   {
     role: "Lập trình viên Fullstack (Outsourcing)",
