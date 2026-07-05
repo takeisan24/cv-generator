@@ -27,7 +27,7 @@ export const personal = {
 
 // Tóm tắt bản thân (Hero/About + CV summary)
 export const summary =
-  "Lập trình viên Frontend (Web & Mobile) thành thạo TypeScript, Next.js/React và React Native/Expo. Đã đóng góp gần 300 Pull Request và hơn 1.400 commits vào một nền tảng Proptech đang chạy production (cả web lẫn mobile), đồng thời tự xây nhiều sản phẩm hoàn chỉnh có người dùng thật. Chú trọng chất lượng code, kiểm thử và trải nghiệm người dùng.";
+  "Lập trình viên Frontend (React/Next.js, React Native) chuyên xây tính năng cho sản phẩm đang chạy production — cả web lẫn mobile. Mạnh về biến thiết kế Figma thành giao diện mượt, đồng bộ chặt với backend qua API contract, và giữ chất lượng bằng test, i18n và review kỹ. Hướng tới những sản phẩm được người dùng thật sử dụng.";
 
 // Số liệu nổi bật — đều là con số THẬT, dùng cho dải thống kê ở mục Giới thiệu.
 export const stats = [
@@ -44,22 +44,21 @@ export const interests = "Ngoài giờ code: chơi guitar 🎸 và xem anime.";
 //  KỸ NĂNG
 // ---------------------------------------------------------------
 export const skills: { group: string; items: string[] }[] = [
-  { group: "Ngôn ngữ", items: ["TypeScript", "JavaScript", "Java", "C#", "SQL"] },
   {
     group: "Frontend",
-    items: ["Next.js", "React", "React Native / Expo", "Tailwind CSS", "shadcn/ui", "Framer Motion"],
+    items: ["TypeScript", "React", "Next.js", "React Native / Expo", "Tailwind CSS", "shadcn/ui"],
   },
   {
     group: "Backend & Dữ liệu",
-    items: ["Node.js", "REST API", "Supabase / PostgreSQL", "MongoDB", "BullMQ / Redis"],
+    items: ["Node.js", "REST API", "Supabase / PostgreSQL"],
   },
   {
-    group: "AI & Dịch vụ",
-    items: ["Google Gemini", "OpenAI", "PayOS / VietQR", "Resend", "Google Maps API"],
+    group: "Chất lượng & Quy trình",
+    items: ["Zustand", "Zod", "Playwright (E2E)", "i18n", "Git / GitHub", "Figma", "Vercel", "Sentry"],
   },
   {
-    group: "Công cụ & Quy trình",
-    items: ["Git / GitHub", "Vercel", "Playwright (E2E)", "Zustand", "Zod", "Sentry"],
+    group: "AI & Tích hợp",
+    items: ["Google Gemini", "OpenAI", "PayOS / VietQR"],
   },
   {
     group: "Ngoại ngữ",
@@ -88,10 +87,10 @@ export const experiences: Experience[] = [
       "Phát triển tính năng trong hệ thống production trên cả mobile app và web app cho môi giới bất động sản.",
     bullets: [
       "Đóng góp ~293 Pull Request (265 đã merge), hơn 1.400 commits và 3.500+ file thay đổi trên 2 repo web + mobile chỉ trong 4 tháng.",
-      "Xây dựng các luồng sản phẩm chính: onboarding, tạo nội dung bằng AI (Gemini), quản lý chiến dịch, quản lý chính sách.",
-      "Triển khai UI mobile theo Figma bằng React Native/Expo: màn tạo/chỉnh sửa bất động sản nhiều bước, upload ảnh, địa chỉ, thông tin pháp lý, microsite, lịch sử giao dịch.",
-      "Đồng bộ contract giữa mobile – web – backend: API payload, migration, field mapping, trạng thái loading/error, validation và backward compatibility.",
-      "Bổ sung test, kiểm tra i18n, typecheck, lint/diff-check và review PR trước khi merge để giảm regression trên các flow quan trọng.",
+      "Triển khai UI mobile (React Native/Expo) từ Figma: onboarding, tạo/chỉnh sửa bất động sản nhiều bước, upload ảnh, nhập địa chỉ & thông tin pháp lý, microsite và lịch sử giao dịch.",
+      "Xây các luồng nghiệp vụ chính: tạo nội dung bằng AI (Gemini), quản lý chiến dịch và quản lý chính sách.",
+      "Đồng bộ API contract mobile – web – backend (payload, field mapping, migration) cùng xử lý loading/error, validation và backward compatibility.",
+      "Đảm bảo chất lượng bằng test, kiểm tra i18n, typecheck, lint và review PR trước khi merge — giảm regression trên các flow quan trọng.",
     ],
     tech: ["React Native", "Expo", "Next.js", "TypeScript", "Supabase / Postgres", "Zustand", "Tailwind / shadcn", "i18n", "Gemini AI"],
   },
@@ -100,12 +99,11 @@ export const experiences: Experience[] = [
     org: "Dự án ContentScheduleAI — nền tảng tạo & lập lịch nội dung bằng AI",
     period: "2026",
     summary:
-      "Đóng góp chính của dự án (200 commits), làm xuyên suốt từ frontend tới backend.",
+      "Người đóng góp nhiều nhất dự án, làm xuyên suốt từ frontend tới backend.",
     bullets: [
-      "Là người đóng góp nhiều nhất dự án với ~200 commits, phụ trách cả giao diện lẫn logic phía server.",
-      "Xây API quản lý bản nháp và lưu trữ dữ liệu nguồn vào Supabase (JSONB), cache để mở lại không cần tải lại file.",
-      "Quản lý state ứng dụng bằng Zustand; tích hợp tính năng AI: trích xuất nội dung từ nguồn và sinh ảnh.",
-      "Viết và ổn định bộ kiểm thử E2E Playwright, cải thiện accessibility (aria-label, data-testid).",
+      "Người đóng góp nhiều nhất dự án: 200 commits (nhiều hơn cả chủ repo) và 66 Pull Request — 100% được merge, chiếm ~69% tổng số PR của dự án.",
+      "Xây API quản lý bản nháp + lưu trữ dữ liệu nguồn vào Supabase (JSONB, cache mở lại không cần tải lại); quản lý state bằng Zustand.",
+      "Tích hợp AI trích xuất nội dung từ nguồn & sinh ảnh; viết và ổn định kiểm thử E2E Playwright, cải thiện accessibility.",
     ],
     tech: ["Next.js", "TypeScript", "Supabase", "Zustand", "Playwright", "Gemini"],
   },
@@ -236,6 +234,7 @@ export const education = {
   // Để trống -> không hiển thị GPA (chiến lược: dự án gánh CV).
   // Nếu sau này GPA >= [REDACTED] thì điền lại, vd: "GPA [REDACTED].0".
   gpa: "[REDACTED]",
+  thesis: "Đồ án tốt nghiệp: CreatorHub — 8.8/10 (3.8/4)",
 };
 
 export const navItems = [

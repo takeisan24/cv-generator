@@ -99,6 +99,11 @@ export default function CvDesignPage() {
                 </p>
                 <p className="text-sm text-neutral-600">{education.major}</p>
                 <p className="text-sm text-neutral-500">{education.period}</p>
+                {education.thesis && (
+                  <p className="mt-1 text-sm text-neutral-600">
+                    {education.thesis}
+                  </p>
+                )}
               </Section>
             </aside>
 

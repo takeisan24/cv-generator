@@ -123,6 +123,9 @@ export default function CvPage() {
           {education.gpa && (
             <p className="text-sm text-muted-foreground">{education.gpa}</p>
           )}
+          {education.thesis && (
+            <p className="text-sm text-muted-foreground">{education.thesis}</p>
+          )}
         </section>
       </main>
     </>
