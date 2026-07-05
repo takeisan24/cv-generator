@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X, FileText } from "@/components/icons";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -9,14 +9,31 @@ import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("");
+
+  // Scrollspy: highlight mục đang hiển thị ở giữa màn hình.
+  useEffect(() => {
+    const els = navItems
+      .map((i) => document.getElementById(i.href.slice(1)))
+      .filter((el): el is HTMLElement => Boolean(el));
+    if (!els.length) return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(`#${e.target.id}`);
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
 
   return (
     <header className="no-print sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
-        <Link
-          href="/"
-          className="font-mono text-sm font-semibold tracking-tight"
-        >
+        <Link href="/" className="font-mono text-sm font-semibold tracking-tight">
           <span className="text-primary">{"</>"}</span> {personal.name}
         </Link>
 
@@ -26,9 +43,17 @@ export function SiteHeader() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-muted-foreground transition-colors hover:text-primary"
+              className={cn(
+                "relative text-sm transition-colors hover:text-primary",
+                active === item.href
+                  ? "font-medium text-primary"
+                  : "text-muted-foreground",
+              )}
             >
               {item.label}
+              {active === item.href && (
+                <span className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-primary" />
+              )}
             </a>
           ))}
         </nav>
@@ -65,7 +90,10 @@ export function SiteHeader() {
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="py-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+              className={cn(
+                "py-2 text-sm transition-colors hover:text-primary",
+                active === item.href ? "text-primary" : "text-muted-foreground",
+              )}
             >
               {item.label}
             </a>

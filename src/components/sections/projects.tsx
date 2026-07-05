@@ -20,7 +20,7 @@ export function Projects() {
         <div className="grid gap-5 md:grid-cols-2">
           {projects.map((p, i) => (
             <Reveal key={p.slug} delay={i * 0.06} className="h-full">
-              <article className="group flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/40">
+              <article className="group flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10">
                 <div className="mb-3 flex items-start justify-between gap-3">
                   <div className="flex items-center gap-2">
                     <span className="text-2xl" aria-hidden>

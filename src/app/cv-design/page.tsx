@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { CvToolbar } from "@/components/cv-toolbar";
 import { PhoneReveal } from "@/components/phone-reveal";
+import { Mail, MapPin, Github, Linkedin } from "@/components/icons";
 import {
   personal,
   summary,
@@ -69,16 +70,29 @@ export default function CvDesignPage() {
           {/* Body: 2 cột */}
           <div className="flex flex-col gap-8 px-10 py-8 sm:flex-row print:px-8 print:py-6">
             {/* Sidebar */}
-            <aside className="w-full shrink-0 space-y-6 sm:w-[35%]">
+            <aside className="w-full shrink-0 space-y-6 rounded-xl bg-neutral-50 p-5 sm:w-[35%] print:bg-neutral-50">
               <Section title="Liên hệ">
-                <ul className="space-y-1 text-sm text-neutral-700">
-                  <li>{personal.email}</li>
-                  <li>
+                <ul className="space-y-1.5 text-sm text-neutral-700">
+                  <li className="flex items-center gap-2">
+                    <Mail className="h-3.5 w-3.5 shrink-0 text-pink-500" />
+                    {personal.email}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-pink-500">☎</span>
                     <PhoneReveal />
                   </li>
-                  <li>{personal.location}</li>
-                  <li>github.com/takeisan24</li>
-                  <li>LinkedIn: Tuấn Anh Vũ</li>
+                  <li className="flex items-center gap-2">
+                    <MapPin className="h-3.5 w-3.5 shrink-0 text-pink-500" />
+                    {personal.location}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Github className="h-3.5 w-3.5 shrink-0 text-pink-500" />
+                    github.com/takeisan24
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Linkedin className="h-3.5 w-3.5 shrink-0 text-pink-500" />
+                    Tuấn Anh Vũ
+                  </li>
                 </ul>
               </Section>
 

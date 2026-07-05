@@ -1,5 +1,7 @@
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { ScrollProgress } from "@/components/scroll-progress";
+import { BackToTop } from "@/components/back-to-top";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Skills } from "@/components/sections/skills";
@@ -41,6 +43,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
       />
+      <ScrollProgress />
       <SiteHeader />
       <main className="flex-1">
         <Hero />
@@ -51,6 +54,7 @@ export default function Home() {
         <Contact />
       </main>
       <SiteFooter />
+      <BackToTop />
     </>
   );
 }

@@ -1,11 +1,9 @@
-import type { ReactNode } from "react";
-import { cn } from "@/lib/utils";
+"use client";
 
-/**
- * Hiệu ứng xuất hiện nhẹ bằng CSS thuần (không phụ thuộc JS).
- * Nội dung luôn hiển thị ở trạng thái cuối -> đọc được kể cả khi tắt JS,
- * và tự tắt animation khi người dùng bật prefers-reduced-motion.
- */
+import { motion, useReducedMotion } from "framer-motion";
+import type { ReactNode } from "react";
+
+/** Hiệu ứng xuất hiện khi cuộn tới — dùng framer-motion, tôn trọng reduced-motion. */
 export function Reveal({
   children,
   delay = 0,
@@ -15,12 +13,17 @@ export function Reveal({
   delay?: number;
   className?: string;
 }) {
+  const reduce = useReducedMotion();
+
   return (
-    <div
-      className={cn("reveal-in", className)}
-      style={{ animationDelay: `${delay}s` }}
+    <motion.div
+      className={className}
+      initial={reduce ? false : { opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "0px 0px -8% 0px" }}
+      transition={{ duration: 0.6, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }
