@@ -38,7 +38,7 @@ function Section({
 export default function CvDesignPage() {
   return (
     <>
-      <CvToolbar altHref="/cv" altLabel="Bản ATS" />
+      <CvToolbar altHref="/cv" altLabel="Bản ATS" pdfType="design" />
 
       <div className="cv-design bg-neutral-200 py-8 print:bg-white print:py-0">
         <div className="mx-auto max-w-[820px] bg-white text-neutral-800 shadow-xl print:shadow-none">

@@ -26,7 +26,7 @@ function H({ children }: { children: React.ReactNode }) {
 export default function CvPage() {
   return (
     <>
-      <CvToolbar altHref="/cv-design" altLabel="Bản thiết kế" />
+      <CvToolbar altHref="/cv-design" altLabel="Bản thiết kế" pdfType="ats" />
 
       <main className="mx-auto max-w-3xl px-5 py-8 sm:px-8 print:max-w-none print:px-0 print:py-0">
         {/* Header */}
