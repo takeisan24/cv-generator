@@ -80,8 +80,8 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    role: "Thực tập sinh / CTV Lập trình Frontend (Web & Mobile)",
-    org: "Công ty công nghệ — nền tảng Proptech (marketing & quản lý nguồn hàng BĐS cho môi giới, web + mobile)",
+    role: "Cộng tác viên Lập trình Frontend (Web & Mobile)",
+    org: "Công ty Cổ phần Propgate — nền tảng marketing & quản lý nguồn hàng bất động sản cho môi giới (web + mobile)",
     period: "03/2026 – 06/2026",
     summary:
       "Phát triển tính năng trong hệ thống production trên cả mobile app và web app cho môi giới bất động sản.",
@@ -95,8 +95,8 @@ export const experiences: Experience[] = [
     tech: ["React Native", "Expo", "Next.js", "TypeScript", "Supabase / Postgres", "Zustand", "Tailwind / shadcn", "i18n", "Gemini AI"],
   },
   {
-    role: "Lập trình viên Fullstack (Outsourcing)",
-    org: "Dự án ContentScheduleAI — nền tảng tạo & lập lịch nội dung bằng AI",
+    role: "Thực tập sinh Lập trình (Fullstack)",
+    org: "Công ty Cổ phần Finful — dự án ContentScheduleAI (nền tảng tạo & lập lịch nội dung bằng AI)",
     period: "2026",
     summary:
       "Người đóng góp nhiều nhất dự án, làm xuyên suốt từ frontend tới backend.",
