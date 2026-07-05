@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 function H({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="mb-2 border-b border-border pb-1 text-sm font-bold uppercase tracking-wide text-primary">
+    <h2 className="mb-2 border-b border-pink-200 pb-1 text-sm font-bold uppercase tracking-wide text-pink-600">
       {children}
     </h2>
   );
@@ -28,106 +28,115 @@ export default function CvPage() {
     <>
       <CvToolbar altHref="/cv-design" altLabel="Bản thiết kế" pdfType="ats" />
 
-      <main className="mx-auto max-w-3xl px-5 py-8 sm:px-8 print:max-w-none print:px-0 print:py-0">
-        {/* Header */}
-        <header className="mb-5">
-          <h1 className="text-2xl font-bold">{personal.name}</h1>
-          <p className="text-base font-semibold text-primary">
-            {personal.role} · {personal.roleSub}
-          </p>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {personal.email} · <PhoneReveal /> · {personal.location}
-          </p>
-          <p className="text-sm text-muted-foreground">
-            github.com/takeisan24 · LinkedIn: Tuấn Anh Vũ
-          </p>
-          <p className="mt-1 text-sm font-medium text-primary">
-            {personal.availability}
-          </p>
-        </header>
+      {/* Tài liệu nền trắng cố định (không phụ thuộc theme) */}
+      <div className="bg-neutral-100 py-8 print:bg-white print:py-0">
+        <main className="mx-auto max-w-3xl bg-white p-8 text-neutral-800 shadow-xl sm:p-10 print:max-w-none print:p-0 print:shadow-none">
+          {/* Header */}
+          <header className="mb-5">
+            <h1 className="text-2xl font-bold text-neutral-900">
+              {personal.name}
+            </h1>
+            <p className="text-base font-semibold text-pink-600">
+              {personal.role} · {personal.roleSub}
+            </p>
+            <p className="mt-2 text-sm text-neutral-600">
+              {personal.email} · <PhoneReveal /> · {personal.location}
+            </p>
+            <p className="text-sm text-neutral-600">
+              github.com/takeisan24 · LinkedIn: Tuấn Anh Vũ
+            </p>
+            <p className="mt-1 text-sm font-medium text-pink-600">
+              {personal.availability}
+            </p>
+          </header>
 
-        {/* Tóm tắt */}
-        <section className="mb-5">
-          <H>Tóm tắt</H>
-          <p className="text-sm leading-relaxed">{summary}</p>
-        </section>
+          {/* Tóm tắt */}
+          <section className="mb-5">
+            <H>Tóm tắt</H>
+            <p className="text-sm leading-relaxed text-neutral-700">{summary}</p>
+          </section>
 
-        {/* Kỹ năng */}
-        <section className="mb-5">
-          <H>Kỹ năng kỹ thuật</H>
-          <ul className="space-y-1 text-sm">
-            {skills.map((g) => (
-              <li key={g.group}>
-                <span className="font-semibold">{g.group}:</span>{" "}
-                {g.items.join(", ")}
-              </li>
-            ))}
-          </ul>
-        </section>
+          {/* Kỹ năng */}
+          <section className="mb-5">
+            <H>Kỹ năng kỹ thuật</H>
+            <ul className="space-y-1 text-sm text-neutral-700">
+              {skills.map((g) => (
+                <li key={g.group}>
+                  <span className="font-semibold text-neutral-900">
+                    {g.group}:
+                  </span>{" "}
+                  {g.items.join(", ")}
+                </li>
+              ))}
+            </ul>
+          </section>
 
-        {/* Kinh nghiệm */}
-        <section className="mb-5">
-          <H>Kinh nghiệm</H>
-          <div className="space-y-3">
-            {experiences.map((exp) => (
-              <div key={exp.org}>
-                <div className="flex items-baseline justify-between gap-2">
-                  <p className="text-sm font-bold">{exp.role}</p>
-                  <p className="shrink-0 text-xs text-muted-foreground">
-                    {exp.period}
+          {/* Kinh nghiệm */}
+          <section className="mb-5">
+            <H>Kinh nghiệm</H>
+            <div className="space-y-3">
+              {experiences.map((exp) => (
+                <div key={exp.org}>
+                  <div className="flex items-baseline justify-between gap-2">
+                    <p className="text-sm font-bold text-neutral-900">
+                      {exp.role}
+                    </p>
+                    <p className="shrink-0 text-xs text-neutral-500">
+                      {exp.period}
+                    </p>
+                  </div>
+                  <p className="text-sm italic text-neutral-600">{exp.org}</p>
+                  <ul className="mt-1 list-disc space-y-0.5 pl-5 text-sm text-neutral-700">
+                    {exp.bullets.map((b) => (
+                      <li key={b}>{b}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Dự án */}
+          <section className="mb-5">
+            <H>Dự án nổi bật</H>
+            <div className="space-y-2">
+              {projects.map((p) => (
+                <div key={p.slug}>
+                  <p className="text-sm text-neutral-700">
+                    <span className="font-bold text-neutral-900">{p.name}</span>
+                    <span className="text-neutral-500"> — {p.tagline}</span>
+                  </p>
+                  <p className="text-xs text-neutral-500">
+                    {p.highlights.join(" · ")} | {p.tech.join(", ")}
                   </p>
                 </div>
-                <p className="text-sm italic text-muted-foreground">
-                  {exp.org}
-                </p>
-                <ul className="mt-1 list-disc space-y-0.5 pl-5 text-sm">
-                  {exp.bullets.map((b) => (
-                    <li key={b}>{b}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
 
-        {/* Dự án */}
-        <section className="mb-5">
-          <H>Dự án nổi bật</H>
-          <div className="space-y-2">
-            {projects.map((p) => (
-              <div key={p.slug}>
-                <p className="text-sm">
-                  <span className="font-bold">{p.name}</span>
-                  <span className="text-muted-foreground"> — {p.tagline}</span>
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  {p.highlights.join(" · ")} | {p.tech.join(", ")}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Học vấn */}
-        <section>
-          <H>Học vấn</H>
-          <div className="flex items-baseline justify-between gap-2 text-sm">
-            <p>
-              <span className="font-bold">{education.school}</span> —{" "}
-              {education.major}
-            </p>
-            <p className="shrink-0 text-xs text-muted-foreground">
-              {education.period}
-            </p>
-          </div>
-          {education.gpa && (
-            <p className="text-sm text-muted-foreground">{education.gpa}</p>
-          )}
-          {education.thesis && (
-            <p className="text-sm text-muted-foreground">{education.thesis}</p>
-          )}
-        </section>
-      </main>
+          {/* Học vấn */}
+          <section>
+            <H>Học vấn</H>
+            <div className="flex items-baseline justify-between gap-2 text-sm text-neutral-700">
+              <p>
+                <span className="font-bold text-neutral-900">
+                  {education.school}
+                </span>{" "}
+                — {education.major}
+              </p>
+              <p className="shrink-0 text-xs text-neutral-500">
+                {education.period}
+              </p>
+            </div>
+            {education.gpa && (
+              <p className="text-sm text-neutral-600">{education.gpa}</p>
+            )}
+            {education.thesis && (
+              <p className="text-sm text-neutral-600">{education.thesis}</p>
+            )}
+          </section>
+        </main>
+      </div>
     </>
   );
 }
