@@ -97,7 +97,7 @@ export const experiences: Experience[] = [
   {
     role: "Thực tập sinh Lập trình (Fullstack)",
     org: "Công ty Cổ phần Finful — dự án ContentScheduleAI (nền tảng tạo & lập lịch nội dung bằng AI)",
-    period: "2026",
+    period: "10/2025 – 03/2026",
     summary:
       "Người đóng góp nhiều nhất dự án, làm xuyên suốt từ frontend tới backend.",
     bullets: [
