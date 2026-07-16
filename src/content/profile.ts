@@ -101,11 +101,14 @@ export const experiences: Experience[] = [
     summary:
       "Người đóng góp nhiều nhất dự án, làm xuyên suốt từ frontend tới backend.",
     bullets: [
-      "Người đóng góp nhiều nhất dự án: 200 commits (nhiều hơn cả chủ repo) và 66 Pull Request — 100% được merge, chiếm ~69% tổng số PR của dự án.",
-      "Xây API quản lý bản nháp + lưu trữ dữ liệu nguồn vào Supabase (JSONB, cache mở lại không cần tải lại); quản lý state bằng Zustand.",
-      "Tích hợp AI trích xuất nội dung từ nguồn & sinh ảnh; viết và ổn định kiểm thử E2E Playwright, cải thiện accessibility.",
+      "Người đóng góp nhiều nhất dự án: 66 Pull Request (100% được merge, ~69% tổng số PR) và 200 commits — phụ trách xuyên suốt frontend lẫn backend.",
+      "Tích hợp cổng thanh toán OnePay end-to-end: luồng mua gói, truy vấn kết quả giao dịch (QueryDR), hệ thống credit, bảo mật thanh toán và kế hoạch kiểm thử thanh toán.",
+      "Xây tính năng AI sinh nội dung: sinh ảnh qua Gemini (gọi REST trực tiếp, 4K, Search Grounding), sinh video, đọc & phân tích video TikTok; thiết kế system prompt, xử lý lỗi AI provider và chống retry explosion.",
+      "Xây API quản lý bản nháp & nguồn dữ liệu (PDF, video) lưu trên Supabase/PostgreSQL (JSONB, cache mở lại không cần tải lại); thiết kế schema, đồng bộ env/database và cron job trên Vercel.",
+      "Xác thực & tài khoản: đăng nhập Google OAuth, luồng đăng ký, quên mật khẩu, điều khoản & chính sách.",
+      "Giao diện & chất lượng: trang Calendar, luồng tạo bài viết, skeleton loading, responsive mobile, đa ngôn ngữ (i18n); kiểm thử E2E Playwright và cải thiện accessibility.",
     ],
-    tech: ["Next.js", "TypeScript", "Supabase", "Zustand", "Playwright", "Gemini"],
+    tech: ["Next.js", "TypeScript", "Supabase / PostgreSQL", "Zustand", "OnePay", "Gemini + OpenAI", "Playwright", "i18n"],
   },
 ];
 
