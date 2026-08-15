@@ -20,7 +20,7 @@ export const personal = {
   // giá trị nằm trong src/components/phone-reveal.tsx (không đưa vào HTML tĩnh).
   links: {
     github: "https://github.com/takeisan24",
-    linkedin: "https://www.linkedin.com/in/tu%E1%BA%A5n-anh-v%C5%A9-2a1536415/",
+    linkedin: "https://www.linkedin.com/in/takeisan24/",
     bio: "https://bio.link/takeisan204",
   },
 } as const;
@@ -33,7 +33,7 @@ export const summary =
 export const stats = [
   { value: "293", label: "Pull Request trong sản phẩm production" },
   { value: "1.400+", label: "commits code" },
-  { value: "743", label: "người dùng thật (Waguri Bot)" },
+  { value: "1.428", label: "thành viên dùng bot thật (Waguri Bot)" },
   { value: "8.8/10", label: "điểm đồ án tốt nghiệp" },
 ];
 
@@ -45,20 +45,28 @@ export const interests = "Ngoài giờ code: chơi guitar 🎸 và xem anime.";
 // ---------------------------------------------------------------
 export const skills: { group: string; items: string[] }[] = [
   {
-    group: "Frontend",
-    items: ["TypeScript", "React", "Next.js", "React Native / Expo", "Tailwind CSS", "shadcn/ui"],
+    group: "Ngôn ngữ & Framework",
+    items: ["TypeScript", "Next.js (App Router)", "React", "React Native / Expo", "Node.js"],
+  },
+  {
+    group: "Giao diện",
+    items: ["Tailwind CSS", "shadcn/ui", "Radix UI", "NativeWind"],
   },
   {
     group: "Backend & Dữ liệu",
-    items: ["Node.js", "REST API", "Supabase / PostgreSQL"],
+    items: ["Route Handler", "REST API", "Cron job", "Webhook", "Hàng đợi job", "Supabase / PostgreSQL", "JSONB", "Migration", "Zod"],
+  },
+  {
+    group: "Tích hợp",
+    items: ["Google Gemini", "OpenAI", "OnePay", "VNPay", "PayOS / VietQR", "Google OAuth"],
   },
   {
     group: "Chất lượng & Quy trình",
-    items: ["Zustand", "Zod", "Playwright (E2E)", "i18n", "Git / GitHub", "Figma", "Vercel", "Sentry"],
+    items: ["Zustand", "Playwright (E2E)", "i18n (next-intl)", "Accessibility", "ESLint", "Git / GitHub", "Code review", "CI (GitHub Actions)"],
   },
   {
-    group: "AI & Tích hợp",
-    items: ["Google Gemini", "OpenAI", "PayOS / VietQR"],
+    group: "DevOps",
+    items: ["Vercel", "EAS Build/Update", "Sentry", "PostHog"],
   },
   {
     group: "Ngoại ngữ",
@@ -86,29 +94,30 @@ export const experiences: Experience[] = [
     summary:
       "Phát triển tính năng trong hệ thống production trên cả mobile app và web app cho môi giới bất động sản.",
     bullets: [
-      "Đóng góp ~293 Pull Request (265 đã merge), hơn 1.400 commits và 3.500+ file thay đổi trên 2 repo web + mobile chỉ trong 4 tháng.",
-      "Triển khai UI mobile (React Native/Expo) từ Figma: onboarding, tạo/chỉnh sửa bất động sản nhiều bước, upload ảnh, nhập địa chỉ & thông tin pháp lý, microsite và lịch sử giao dịch.",
-      "Xây các luồng nghiệp vụ chính: tạo nội dung bằng AI (Gemini), quản lý chiến dịch và quản lý chính sách.",
-      "Đồng bộ API contract mobile – web – backend (payload, field mapping, migration) cùng xử lý loading/error, validation và backward compatibility.",
-      "Đảm bảo chất lượng bằng test, kiểm tra i18n, typecheck, lint và review PR trước khi merge — giảm regression trên các flow quan trọng.",
+      "293 Pull Request (265 đã merge — tỉ lệ merge 90%) và hơn 1.400 commit trên 2 codebase web + mobile chỉ trong 4 tháng.",
+      "Khởi tạo codebase mobile từ commit đầu tiên (Expo/React Native, phone OTP auth, hệ thiết kế theo Figma, wizard tạo tin 4 bước) — sau 2 tháng là người tạo 77% số file và 98/115 màn hình.",
+      "Xây màn chiến dịch marketing (mảng lớn nhất của app): thực thi bất đồng bộ có polling, timeout co giãn theo số item, cache lạc quan ở client.",
+      "Viết 44 route handler, 6 cron job và 19 migration SQL cho backend web; dựng hạ tầng xác thực OTP qua edge function gọi thẳng API Zalo (có SMS dự phòng), cờ tính năng kèm công tắc tắt khẩn cấp và luồng gộp tài khoản.",
+      "Xử lý loạt lỗ hổng bảo mật theo OWASP (SSRF, path traversal, XSS, rò rỉ API key/OAuth secret) và chuyển hàng đợi job từ BullMQ + Redis sang Upstash QStash cho môi trường serverless.",
+      "Dẫn hai đợt migration toàn app mobile: StyleSheet → NativeWind v4 (~15 PR) và ~700 chuỗi hardcode sang đa ngôn ngữ; cấu hình EAS Build/Update và phát hành TestFlight.",
     ],
-    tech: ["React Native", "Expo", "Next.js", "TypeScript", "Supabase / Postgres", "Zustand", "Tailwind / shadcn", "i18n", "Gemini AI"],
+    tech: ["React Native", "Expo", "Next.js", "TypeScript", "Supabase / Postgres", "Zustand", "NativeWind", "i18n", "QStash", "Gemini AI"],
   },
   {
     role: "Thực tập sinh Lập trình (Fullstack)",
-    org: "Công ty Cổ phần Finful — dự án ContentScheduleAI (nền tảng tạo & lập lịch nội dung bằng AI)",
-    period: "10/2025 – 03/2026",
+    org: "Công ty Cổ phần Finful — dự án ContentScheduleAI (nạp tư liệu PDF/URL/YouTube/TikTok → sinh nội dung bằng AI → lập lịch đăng đa nền tảng)",
+    period: "10/2025 – 04/2026",
     summary:
       "Người đóng góp nhiều nhất dự án, làm xuyên suốt từ frontend tới backend.",
     bullets: [
-      "Người đóng góp nhiều nhất dự án: 66 Pull Request (100% được merge, ~69% tổng số PR) và 200 commits — phụ trách xuyên suốt frontend lẫn backend.",
-      "Tích hợp cổng thanh toán OnePay end-to-end: luồng mua gói, truy vấn kết quả giao dịch (QueryDR), hệ thống credit, bảo mật thanh toán và kế hoạch kiểm thử thanh toán.",
-      "Xây tính năng AI sinh nội dung: sinh ảnh qua Gemini (gọi REST trực tiếp, 4K, Search Grounding), sinh video, đọc & phân tích video TikTok; thiết kế system prompt, xử lý lỗi AI provider và chống retry explosion.",
-      "Xây API quản lý bản nháp & nguồn dữ liệu (PDF, video) lưu trên Supabase/PostgreSQL (JSONB, cache mở lại không cần tải lại); thiết kế schema, đồng bộ env/database và cron job trên Vercel.",
-      "Xác thực & tài khoản: đăng nhập Google OAuth, luồng đăng ký, quên mật khẩu, điều khoản & chính sách.",
-      "Giao diện & chất lượng: trang Calendar, luồng tạo bài viết, skeleton loading, responsive mobile, đa ngôn ngữ (i18n); kiểm thử E2E Playwright và cải thiện accessibility.",
+      "Người đóng góp nhiều nhất dự án: 72 Pull Request (71 đã merge, chiếm 71% tổng PR) và 200 commit — phụ trách xuyên suốt frontend lẫn backend.",
+      "Tự xây luồng thanh toán 2 cổng (OnePay, VNPay) end-to-end: tạo đơn, nhận kết quả từ cổng, cron đối soát giao dịch treo, chống trừ tiền hai lần khi tải lại trang; kèm hệ thống credit.",
+      "Chẩn đoán và sửa lỗi retry chồng nhau qua 3 tầng: gộp về một tầng và đặt timeout dưới ngưỡng 60s của nền tảng — từ 12 lần gọi API/4 phút chờ còn 3 lần/75 giây.",
+      "Xây lại xử lý lỗi cho 3 nhà cung cấp AI (Google, OpenAI, Fal.ai): thêm cơ chế thử lại và luân phiên khoá khi bị giới hạn tần suất; đưa lỗi thật ra giao diện song ngữ vi/en.",
+      "Viết toàn bộ 12 bộ kiểm thử tự động (Playwright) — người duy nhất phụ trách; phát hiện API key/dữ liệu tài khoản bị commit nhầm vào repo, gỡ khỏi git và siết gitignore.",
+      "Giao diện & chất lượng: trang Calendar, luồng tạo bài viết, skeleton loading, responsive mobile, đa ngôn ngữ vi/en; lưu nguồn tư liệu dạng JSONB (mở lại bản nháp không cần tải lại file).",
     ],
-    tech: ["Next.js", "TypeScript", "Supabase / PostgreSQL", "Zustand", "OnePay", "Gemini + OpenAI", "Playwright", "i18n"],
+    tech: ["Next.js", "TypeScript", "Supabase / PostgreSQL", "Zustand", "OnePay / VNPay", "Gemini + OpenAI + Fal.ai", "Playwright", "i18n"],
   },
 ];
 
@@ -141,7 +150,7 @@ export const projects: Project[] = [
     emoji: "🌸",
     featured: true,
     tagline:
-      "Discord bot kinh tế/nhập vai bản địa hóa Việt Nam — 82 lệnh, AI persona, thanh toán VietQR.",
+      "Discord bot kinh tế/nhập vai bản địa hóa Việt Nam — 79 lệnh, AI persona, thanh toán VietQR.",
     role: "Tác giả & lập trình viên duy nhất",
     year: "2026",
     tech: ["discord.js v14", "Supabase / PostgreSQL", "Google Gemini", "Node.js", "Next.js"],
@@ -155,17 +164,17 @@ export const projects: Project[] = [
     solution:
       "Một hệ sinh thái game kinh tế hoàn chỉnh với vòng lặp 'làm việc → kiếm tiền → mua sắm/chế đồ → lên đời', cân bằng hardcore (năng lượng, mệt mỏi) và chống lạm phát bằng nhiều tầng tiêu hao (sink). Tích hợp AI persona trò chuyện và Premium thanh toán qua VietQR.",
     contribution: [
-      "Thiết kế toàn bộ schema cơ sở dữ liệu kinh tế trên Supabase/PostgreSQL.",
-      "Lập trình 82 lệnh: kiếm tiền, cửa hàng & chế tạo, minigame, game nhiều người (Ma Sói, Loto, Bingo), bang hội PvP, chợ giao dịch, vay nợ P2P.",
-      "Tích hợp Google Gemini làm AI trò chuyện có persona; xây gói Premium thanh toán VietQR.",
-      "Kèm web dashboard Next.js: bảng xếp hạng, quản lý Premium.",
+      "Thiết kế toàn bộ schema kinh tế trên Supabase/PostgreSQL (107 migration SQL); mọi thao tác tiền và kho đồ chạy nguyên tử ở tầng database để chống nhân đôi khi nhiều người thao tác cùng lúc.",
+      "Lập trình 79 lệnh: kiếm tiền, cửa hàng & chế tạo, minigame, game nhiều người (Ma Sói, Loto, Bingo), bang hội PvP, chợ giao dịch, vay nợ P2P.",
+      "Tích hợp Google Gemini làm AI trò chuyện có persona; xây gói Premium thanh toán VietQR; tối ưu truy vấn xếp hạng bằng index cho đường truy vấn nóng.",
+      "Đưa ESLint vào codebase chưa từng có linter (lộ ngay 3 lỗi thật), viết 29 file test và CI tự chạy mỗi lần đẩy code; kèm web dashboard Next.js (bảng xếp hạng, quản lý Premium).",
     ],
     result:
-      "Sản phẩm đang vận hành thật với 7 máy chủ Discord và 743 thành viên sử dụng — một hệ thống quy mô lớn do một người xây dựng, thể hiện tư duy thiết kế kinh tế ảo, xử lý đồng thời và chống lạm phát.",
+      "Sản phẩm đang vận hành thật trên 15 máy chủ Discord với 1.428 thành viên (376/378 commit tự phát triển) — hệ thống quy mô lớn do một người xây, thể hiện tư duy thiết kế kinh tế ảo, xử lý đồng thời và chống lạm phát.",
     highlights: [
-      "Đang chạy thật: 7 máy chủ · 743 thành viên",
-      "82 lệnh, hệ kinh tế chống lạm phát nhiều tầng",
-      "AI persona (Gemini) + Premium thanh toán VietQR",
+      "Đang chạy thật: 15 máy chủ · 1.428 thành viên",
+      "79 lệnh · 107 migration SQL · thao tác tiền/kho nguyên tử ở DB",
+      "AI persona (Gemini) + Premium VietQR · ESLint + CI + 29 file test",
     ],
   },
   {
@@ -177,7 +186,7 @@ export const projects: Project[] = [
       "Nền tảng AI hỗ trợ lập kế hoạch & sáng tạo nội dung đa nền tảng — đồ án tốt nghiệp.",
     role: "Đồ án tốt nghiệp — lập trình viên",
     year: "2026",
-    tech: ["Next.js 14", "Supabase", "Gemini + OpenAI", "Zustand", "Playwright", "next-intl"],
+    tech: ["Next.js 14", "Supabase", "Gemini + OpenAI", "Zustand", "Playwright", "next-intl", "VietQR"],
     links: [
       { label: "Demo", href: "https://graduation-project-alpha-dun.vercel.app" },
       { label: "GitHub", href: "https://github.com/takeisan24/graduation-project" },
@@ -188,44 +197,16 @@ export const projects: Project[] = [
     solution:
       "Một nền tảng duy nhất tích hợp Generative AI: sinh nội dung (văn bản, kịch bản, gợi ý hình ảnh), lập lịch đăng bài trực quan và chatbot trợ lý tinh chỉnh nội dung.",
     contribution: [
-      "Xây giao diện và luồng nghiệp vụ với Next.js 14 App Router, form chuẩn hóa bằng react-hook-form + Zod.",
-      "Tích hợp Google Gemini và OpenAI cho việc sinh nội dung.",
-      "Quản lý state bằng Zustand, hỗ trợ đa ngôn ngữ (next-intl), viết kiểm thử E2E với Playwright.",
+      "61 API route (Next.js 14 App Router), tích hợp Gemini + OpenAI, thanh toán VietQR và hệ thống credit; form chuẩn hóa bằng react-hook-form + Zod.",
+      "1.449 khoá đa ngôn ngữ khớp tuyệt đối vi/en (next-intl); 13 bộ kiểm thử E2E Playwright, có cấu hình riêng cho luồng tạo nội dung.",
+      "Viết 42 tài liệu đặc tả trước khi code, phân mức ưu tiên theo rủi ro; rà soát lại toàn hệ thống trước khi bàn giao (77/77 commit, làm một mình).",
     ],
     result:
-      "Đồ án tốt nghiệp đạt 8.8/10 (3.8/4), code chuẩn production với validation, đa ngôn ngữ và kiểm thử tự động.",
+      "Đồ án tốt nghiệp đạt 8.8/10 (3.8/4), làm một mình hoàn toàn (77/77 commit) — code chuẩn production với 61 API route, validation, đa ngôn ngữ và kiểm thử tự động.",
     highlights: [
-      "Điểm đồ án tốt nghiệp: 8.8/10 (3.8/4)",
-      "Sinh nội dung đa nền tảng bằng Gemini + OpenAI",
-      "Có kiểm thử E2E (Playwright) & đa ngôn ngữ",
-    ],
-  },
-  {
-    slug: "word-chain-game",
-    name: "Word Chain Game",
-    emoji: "🎮",
-    featured: true,
-    tagline:
-      "Game nối từ PvE full-stack — RESTful API chuẩn mực + thuật toán 'chiếu tướng'.",
-    role: "Bài tập lớn môn Lập trình API",
-    year: "2025",
-    tech: ["Node.js", "REST API", "MongoDB", "MERN"],
-    links: [{ label: "GitHub", href: "https://github.com/takeisan24/word-chain-game" }],
-    problem:
-      "Cần một bài toán minh họa việc thiết kế RESTful API chuẩn mực kết hợp xử lý logic game theo thời gian thực.",
-    solution:
-      "Ứng dụng web full-stack cho phép đấu nối từ với Bot, hỗ trợ cả tiếng Việt (nối theo từ) và tiếng Anh (nối theo ký tự), kèm hệ quản trị từ điển CRUD.",
-    contribution: [
-      "Thiết kế RESTful API đầy đủ GET/POST/PUT/DELETE cho quản trị từ điển.",
-      "Xây thuật toán 'chiếu tướng': rà toàn bộ nước đi khả thi để tuyên thắng/thua khi đối thủ bị dồn vào thế bí.",
-      "Cơ chế chống lặp từ trong ván và Bot phản xạ tự động tìm từ trong kho dữ liệu.",
-    ],
-    result:
-      "Minh họa rõ kỹ năng thiết kế API và tư duy thuật toán — không chỉ là CRUD thông thường.",
-    highlights: [
-      "RESTful API chuẩn + CRUD từ điển",
-      "Thuật toán 'chiếu tướng' tuyên thắng/thua",
-      "Hỗ trợ nối từ song ngữ Việt – Anh",
+      "Điểm đồ án tốt nghiệp: 8.8/10 (3.8/4) · làm một mình 77/77 commit",
+      "61 API route · Gemini + OpenAI · thanh toán VietQR + credit",
+      "1.449 khoá i18n vi/en · 13 bộ E2E Playwright",
     ],
   },
 ];
@@ -233,7 +214,7 @@ export const projects: Project[] = [
 export const education = {
   school: "Trường Đại học Giao thông Vận tải",
   major: "Công nghệ thông tin",
-  period: "Tốt nghiệp 2026",
+  period: "2022 – 2026",
   // Để trống -> không hiển thị GPA (chiến lược: dự án gánh CV).
   // Muốn hiện thì điền vào đây, vd: "GPA x.x/4".
   gpa: "",
