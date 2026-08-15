@@ -21,7 +21,7 @@ export const personal = {
   links: {
     github: "https://github.com/takeisan24",
     linkedin: "https://www.linkedin.com/in/takeisan24/",
-    bio: "https://bio.link/takeisan204",
+    bio: "https://guns.lol/takeisan04",
   },
 } as const;
 
