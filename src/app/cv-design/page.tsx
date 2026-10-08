@@ -156,7 +156,7 @@ export default function CvDesignPage() {
 
               <Section title="Dự án nổi bật">
                 <div className="space-y-3">
-                  {projects.map((p) => (
+                  {projects.filter((p) => p.cv !== false).map((p) => (
                     <div key={p.slug} className="cv-avoid-break">
                       <p className="text-sm font-bold text-neutral-900">
                         {p.name}

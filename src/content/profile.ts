@@ -33,7 +33,7 @@ export const summary =
 export const stats = [
   { value: "293", label: "Pull Request trong sản phẩm production" },
   { value: "1.400+", label: "commits code" },
-  { value: "1.428", label: "thành viên dùng bot thật (Waguri Bot)" },
+  { value: "3.100+", label: "thành viên trên 34 máy chủ dùng Waguri Bot" },
   { value: "8.8/10", label: "điểm đồ án tốt nghiệp" },
 ];
 
@@ -135,6 +135,7 @@ export type Project = {
   tech: string[];
   links: { label: string; href: string }[];
   screenshot?: string; // ảnh chụp sản phẩm cho case study
+  cv?: boolean; // false -> chỉ hiện trên website, không đưa vào CV PDF (mặc định: có)
   // Nội dung case study (chỉ dùng cho dự án featured)
   problem?: string;
   solution?: string;
@@ -150,7 +151,7 @@ export const projects: Project[] = [
     emoji: "🌸",
     featured: true,
     tagline:
-      "Discord bot kinh tế/nhập vai bản địa hóa Việt Nam — 79 lệnh, AI persona, thanh toán VietQR.",
+      "Discord bot kinh tế/nhập vai bản địa hóa Việt Nam — 72 lệnh, AI persona, thanh toán VietQR.",
     role: "Tác giả & lập trình viên duy nhất",
     year: "2026",
     tech: ["discord.js v14", "Supabase / PostgreSQL", "Google Gemini", "Node.js", "Next.js"],
@@ -164,17 +165,17 @@ export const projects: Project[] = [
     solution:
       "Một hệ sinh thái game kinh tế hoàn chỉnh với vòng lặp 'làm việc → kiếm tiền → mua sắm/chế đồ → lên đời', cân bằng hardcore (năng lượng, mệt mỏi) và chống lạm phát bằng nhiều tầng tiêu hao (sink). Tích hợp AI persona trò chuyện và Premium thanh toán qua VietQR.",
     contribution: [
-      "Thiết kế toàn bộ schema kinh tế trên Supabase/PostgreSQL (107 migration SQL); mọi thao tác tiền và kho đồ chạy nguyên tử ở tầng database để chống nhân đôi khi nhiều người thao tác cùng lúc.",
-      "Lập trình 79 lệnh: kiếm tiền, cửa hàng & chế tạo, minigame, game nhiều người (Ma Sói, Loto, Bingo), bang hội PvP, chợ giao dịch, vay nợ P2P.",
+      "Thiết kế toàn bộ schema kinh tế trên Supabase/PostgreSQL (165 migration SQL); mọi thao tác tiền và kho đồ chạy nguyên tử ở tầng database để chống nhân đôi khi nhiều người thao tác cùng lúc.",
+      "Lập trình 72 lệnh: kiếm tiền, cửa hàng & chế tạo, nông trại & tiệm bánh, minigame, game nhiều người (Ma Sói, Loto), chợ giao dịch, quỹ tín dụng có kỳ hạn; chủ động cất kho 9 lệnh ít dùng để bot nhẹ và ít rủi ro hơn.",
       "Tích hợp Google Gemini làm AI trò chuyện có persona; xây gói Premium thanh toán VietQR; tối ưu truy vấn xếp hạng bằng index cho đường truy vấn nóng.",
-      "Đưa ESLint vào codebase chưa từng có linter (lộ ngay 3 lỗi thật), viết 29 file test và CI tự chạy mỗi lần đẩy code; kèm web dashboard Next.js (bảng xếp hạng, quản lý Premium).",
+      "Đưa ESLint vào codebase chưa từng có linter (lộ ngay 3 lỗi thật), viết 93 file test (572 test) và CI tự chạy mỗi lần đẩy code; kèm web dashboard Next.js (bảng xếp hạng, quản lý Premium).",
     ],
     result:
-      "Sản phẩm đang vận hành thật trên 15 máy chủ Discord với 1.428 thành viên (376/378 commit tự phát triển) — hệ thống quy mô lớn do một người xây, thể hiện tư duy thiết kế kinh tế ảo, xử lý đồng thời và chống lạm phát.",
+      "Sản phẩm đang vận hành thật trên 34 máy chủ Discord với hơn 3.100 thành viên và 950+ người chơi (559/561 commit tự phát triển) — hệ thống quy mô lớn do một người xây, thể hiện tư duy thiết kế kinh tế ảo, xử lý đồng thời và chống lạm phát.",
     highlights: [
-      "Đang chạy thật: 15 máy chủ · 1.428 thành viên",
-      "79 lệnh · 107 migration SQL · thao tác tiền/kho nguyên tử ở DB",
-      "AI persona (Gemini) + Premium VietQR · ESLint + CI + 29 file test",
+      "Đang chạy thật: 34 máy chủ · 3.100+ thành viên · 950+ người chơi",
+      "72 lệnh · 165 migration SQL · thao tác tiền/kho nguyên tử ở DB",
+      "AI persona (Gemini) + Premium VietQR · ESLint + CI + 572 test",
     ],
   },
   {
@@ -207,6 +208,27 @@ export const projects: Project[] = [
       "Điểm đồ án tốt nghiệp: 8.8/10 (3.8/4) · làm một mình 77/77 commit",
       "61 API route · Gemini + OpenAI · thanh toán VietQR + credit",
       "1.449 khoá i18n vi/en · 13 bộ E2E Playwright",
+    ],
+  },
+  {
+    slug: "cuoc-hen-nho",
+    name: "Cuộc Hẹn Nhỏ",
+    emoji: "💌",
+    featured: false,
+    cv: false,
+    tagline:
+      "Studio thiệp mời hẹn hò phong cách tạp chí cổ điển — người nhận chọn giờ, chỗ, đồ uống và phản hồi 1 chạm qua Zalo/iMessage.",
+    role: "Tác giả & lập trình viên duy nhất",
+    year: "2026",
+    tech: ["Next.js 16", "React 19", "Tailwind v4", "Supabase", "Framer Motion", "Web Audio API"],
+    links: [
+      { label: "Demo", href: "https://cuochennho.vercel.app" },
+      { label: "GitHub", href: "https://github.com/takeisan24/invitation-studio" },
+    ],
+    highlights: [
+      "Không cần đăng nhập · chia sẻ bằng link rút gọn hoặc QR · vé hẹn kiểu boarding pass",
+      "Mở phong bì, tiếng giấy và dấu sáp bằng Web Audio API · 4 bảng màu báo chí",
+      "Xuất lịch Apple/Google · thẻ story 9:16 · nhạc nền đĩa than",
     ],
   },
 ];

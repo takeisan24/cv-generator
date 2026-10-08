@@ -100,7 +100,7 @@ export default function CvPage() {
           <section className="mb-5">
             <H>Dự án nổi bật</H>
             <div className="space-y-2">
-              {projects.map((p) => (
+              {projects.filter((p) => p.cv !== false).map((p) => (
                 <div key={p.slug}>
                   <p className="text-sm text-neutral-700">
                     <span className="font-bold text-neutral-900">{p.name}</span>
