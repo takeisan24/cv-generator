@@ -7,6 +7,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Badge } from "@/components/ui/badge";
 import { projects, personal } from "@/content/profile";
+import { withLiveStats } from "@/lib/waguri-stats";
 
 export function generateStaticParams() {
   return projects.filter((p) => p.featured).map((p) => ({ slug: p.slug }));
@@ -43,8 +44,9 @@ export default async function ProjectPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
-  if (!project || !project.featured) notFound();
+  const found = projects.find((p) => p.slug === slug);
+  if (!found || !found.featured) notFound();
+  const project = await withLiveStats(found);
 
   return (
     <>

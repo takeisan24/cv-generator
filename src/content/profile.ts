@@ -9,7 +9,7 @@ export const personal = {
   role: "Frontend Developer",
   roleSub: "React · Next.js · React Native — hướng Fullstack",
   tagline:
-    "Sinh viên CNTT sắp tốt nghiệp. Đã đóng góp ~293 Pull Request vào một nền tảng Proptech đang chạy production (web + mobile), và tự xây sản phẩm AI có người dùng thật.",
+    "Mới tốt nghiệp ngành CNTT (2026). Đã đóng góp ~293 Pull Request vào một nền tảng Proptech đang chạy production (web + mobile), và tự xây sản phẩm AI có người dùng thật.",
   location: "Hà Nội, Việt Nam",
   avatar: "/avatar.jpg",
   availability: "Sẵn sàng đi làm ngay · Onsite hoặc Remote",
@@ -33,7 +33,7 @@ export const summary =
 export const stats = [
   { value: "293", label: "Pull Request trong sản phẩm production" },
   { value: "1.400+", label: "commits code" },
-  { value: "3.100+", label: "thành viên trên 34 máy chủ dùng Waguri Bot" },
+  { value: "{members}", label: "thành viên trên {servers} máy chủ dùng Waguri Bot" },
   { value: "8.8/10", label: "điểm đồ án tốt nghiệp" },
 ];
 
@@ -171,9 +171,9 @@ export const projects: Project[] = [
       "Đưa ESLint vào codebase chưa từng có linter (lộ ngay 3 lỗi thật), viết 93 file test (572 test) và CI tự chạy mỗi lần đẩy code; kèm web dashboard Next.js (bảng xếp hạng, quản lý Premium).",
     ],
     result:
-      "Sản phẩm đang vận hành thật trên 34 máy chủ Discord với hơn 3.100 thành viên và 950+ người chơi (559/561 commit tự phát triển) — hệ thống quy mô lớn do một người xây, thể hiện tư duy thiết kế kinh tế ảo, xử lý đồng thời và chống lạm phát.",
+      "Sản phẩm đang vận hành thật trên {servers} máy chủ Discord với {members} thành viên và {players} người chơi (559/561 commit tự phát triển) — hệ thống quy mô lớn do một người xây, thể hiện tư duy thiết kế kinh tế ảo, xử lý đồng thời và chống lạm phát.",
     highlights: [
-      "Đang chạy thật: 34 máy chủ · 3.100+ thành viên · 950+ người chơi",
+      "Đang chạy thật: {servers} máy chủ · {members} thành viên · {players} người chơi",
       "72 lệnh · 165 migration SQL · thao tác tiền/kho nguyên tử ở DB",
       "AI persona (Gemini) + Premium VietQR · ESLint + CI + 572 test",
     ],

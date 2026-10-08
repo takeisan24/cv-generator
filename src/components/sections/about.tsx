@@ -1,13 +1,14 @@
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { summary, education, stats, interests } from "@/content/profile";
+import { summary, education, stats as rawStats, interests } from "@/content/profile";
+import { withLiveStats } from "@/lib/waguri-stats";
 import { GraduationCap, Sparkles, Code2 } from "@/components/icons";
 
 const facts = [
   {
     icon: Code2,
     title: "Tự xây sản phẩm hoàn chỉnh",
-    desc: "Từ ý tưởng đến vận hành: bot 82 lệnh, nền tảng AI, tích hợp thanh toán.",
+    desc: "Từ ý tưởng đến vận hành: bot 72 lệnh, nền tảng AI, tích hợp thanh toán.",
   },
   {
     icon: Sparkles,
@@ -23,7 +24,8 @@ const facts = [
   },
 ];
 
-export function About() {
+export async function About() {
+  const stats = await withLiveStats(rawStats);
   return (
     <section id="about" className="border-b border-border">
       <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6">

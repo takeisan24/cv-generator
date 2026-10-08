@@ -6,9 +6,10 @@ import {
   summary,
   skills,
   experiences,
-  projects,
+  projects as rawProjects,
   education,
 } from "@/content/profile";
+import { withLiveStats } from "@/lib/waguri-stats";
 
 export const metadata: Metadata = {
   title: `CV — ${personal.name}`,
@@ -23,7 +24,8 @@ function H({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function CvPage() {
+export default async function CvPage() {
+  const projects = await withLiveStats(rawProjects);
   return (
     <>
       <CvToolbar altHref="/cv-design" altLabel="Bản thiết kế" pdfType="ats" />

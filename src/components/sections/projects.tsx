@@ -3,9 +3,11 @@ import { ArrowUpRight, Github } from "@/components/icons";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { Badge } from "@/components/ui/badge";
-import { projects } from "@/content/profile";
+import { projects as rawProjects } from "@/content/profile";
+import { withLiveStats } from "@/lib/waguri-stats";
 
-export function Projects() {
+export async function Projects() {
+  const projects = await withLiveStats(rawProjects);
   return (
     <section id="projects" className="border-b border-border">
       <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6">

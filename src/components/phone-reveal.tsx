@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useMounted } from "@/lib/use-mounted";
 
 // Số điện thoại KHÔNG nằm trong mã nguồn — nạp từ biến môi trường
 // (NEXT_PUBLIC_PHONE, đặt trong Vercel) nên repo public không chứa nó.
@@ -9,8 +9,7 @@ import { useEffect, useState } from "react";
 const PHONE = process.env.NEXT_PUBLIC_PHONE ?? "";
 
 export function PhoneReveal() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  const mounted = useMounted();
 
   // Trước khi mount, hoặc khi chưa cấu hình env: placeholder để không nhảy layout.
   return <span>{mounted && PHONE ? PHONE : "•••• ••• •••"}</span>;
