@@ -6,10 +6,10 @@
 export const personal = {
   name: "Vũ Tuấn Anh",
   // Vai trò chính hiển thị ở Hero & CV
-  role: "Frontend Developer",
-  roleSub: "React · Next.js · React Native — hướng Fullstack",
+  role: "Fullstack Developer",
+  roleSub: "Next.js · TypeScript · PostgreSQL",
   tagline:
-    "Mới tốt nghiệp ngành CNTT (2026). Đã đóng góp ~293 Pull Request vào một nền tảng Proptech đang chạy production (web + mobile), và tự xây sản phẩm AI có người dùng thật.",
+    "Mới tốt nghiệp ngành CNTT (2026). Hơn 330 Pull Request đã merge trên sản phẩm production (web, mobile, backend); tự xây và vận hành website cùng cơ sở dữ liệu cho một game trên hơn 80 server Discord.",
   location: "Hà Nội, Việt Nam",
   avatar: "/avatar.jpg",
   availability: "Sẵn sàng đi làm ngay · Onsite hoặc Remote",
@@ -27,13 +27,13 @@ export const personal = {
 
 // Tóm tắt bản thân (Hero/About + CV summary)
 export const summary =
-  "Lập trình viên Frontend (React/Next.js, React Native) chuyên xây tính năng cho sản phẩm đang chạy production — cả web lẫn mobile. Mạnh về biến thiết kế Figma thành giao diện mượt, đồng bộ chặt với backend qua API contract, và giữ chất lượng bằng test, i18n và review kỹ. Hướng tới những sản phẩm được người dùng thật sử dụng.";
+  "Lập trình viên Fullstack (Next.js, React Native, PostgreSQL), xây tính năng cho sản phẩm đang chạy production, từ giao diện tới lớp dữ liệu phía sau. Chú trọng tính đúng đắn của dữ liệu (giao dịch nguyên tử, phân quyền DB) và giữ chất lượng bằng test, i18n và review kỹ.";
 
 // Số liệu nổi bật — đều là con số THẬT, dùng cho dải thống kê ở mục Giới thiệu.
 export const stats = [
-  { value: "293", label: "Pull Request trong sản phẩm production" },
+  { value: "330+", label: "Pull Request đã merge trên sản phẩm production" },
   { value: "1.400+", label: "commits code" },
-  { value: "{members}", label: "thành viên trên {servers} máy chủ dùng Waguri Bot" },
+  { value: "{servers}", label: "máy chủ Discord dùng Waguri" },
   { value: "8.8/10", label: "điểm đồ án tốt nghiệp" },
 ];
 
@@ -46,11 +46,11 @@ export const interests = "Ngoài giờ code: chơi guitar 🎸 và xem anime.";
 export const skills: { group: string; items: string[] }[] = [
   {
     group: "Ngôn ngữ & Framework",
-    items: ["TypeScript", "Next.js (App Router)", "React", "React Native / Expo", "Node.js"],
+    items: ["TypeScript", "Next.js (App Router)", "React", "Angular (cơ bản)", "React Native / Expo", "Node.js"],
   },
   {
     group: "Giao diện",
-    items: ["Tailwind CSS", "shadcn/ui", "Radix UI", "NativeWind"],
+    items: ["Tailwind CSS", "shadcn/ui", "Radix UI", "MUI", "NativeWind"],
   },
   {
     group: "Backend & Dữ liệu",
@@ -62,7 +62,7 @@ export const skills: { group: string; items: string[] }[] = [
   },
   {
     group: "Chất lượng & Quy trình",
-    items: ["Zustand", "Playwright (E2E)", "i18n (next-intl)", "Accessibility", "ESLint", "Git / GitHub", "Code review", "CI (GitHub Actions)"],
+    items: ["Zustand", "Redux Toolkit", "Playwright (E2E)", "i18n (next-intl)", "Accessibility", "ESLint", "Git / GitHub", "Code review", "CI (GitHub Actions)"],
   },
   {
     group: "DevOps",
@@ -70,7 +70,7 @@ export const skills: { group: string; items: string[] }[] = [
   },
   {
     group: "Ngoại ngữ",
-    items: ["Tiếng Anh — giao tiếp & đọc/viết tài liệu kỹ thuật tốt"],
+    items: ["Tiếng Anh — đọc và viết tài liệu kỹ thuật tốt"],
   },
 ];
 
@@ -88,13 +88,25 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    role: "Thực tập sinh Lập trình Frontend",
+    org: "VietSoftware International (VSII)",
+    period: "10/2026 – nay",
+    summary: "Thực tập mảng Frontend, làm theo ticket và review.",
+    bullets: [
+      "Dựng màn bản đồ mặt bằng tương tác bằng React 19 + TypeScript (OpenSeadragon): ảnh tile zoom sâu, xếp nhãn không chồng bằng R-tree, bộ lọc, tìm theo mã; lớp API tự làm mới token khi gặp 401; 72 test Vitest.",
+      "Dựng màn hiển thị nội dung từ CMS theo Figma bằng React + MUI, nối API backend, lọc HTML bằng DOMPurify; sau đó làm lại bằng Angular 21 với 50 unit test.",
+      "Bài tập React + Redux Toolkit: gọi API phân trang, giữ dữ liệu cũ khi mất mạng và tự thử lại khi có mạng.",
+    ],
+    tech: ["React", "TypeScript", "Angular", "Redux Toolkit", "MUI", "Tailwind CSS", "Vitest"],
+  },
+  {
     role: "Cộng tác viên Lập trình Frontend (Web & Mobile)",
     org: "Công ty Cổ phần Propgate — nền tảng marketing & quản lý nguồn hàng bất động sản cho môi giới (web + mobile)",
     period: "03/2026 – 06/2026",
     summary:
       "Phát triển tính năng trong hệ thống production trên cả mobile app và web app cho môi giới bất động sản.",
     bullets: [
-      "293 Pull Request (265 đã merge — tỉ lệ merge 90%) và hơn 1.400 commit trên 2 codebase web + mobile chỉ trong 4 tháng.",
+      "265 Pull Request được merge và hơn 1.400 commit trên 2 codebase web + mobile trong 4 tháng.",
       "Khởi tạo codebase mobile từ commit đầu tiên (Expo/React Native, phone OTP auth, hệ thiết kế theo Figma, wizard tạo tin 4 bước) — sau 2 tháng là người tạo 77% số file và 98/115 màn hình.",
       "Xây màn chiến dịch marketing (mảng lớn nhất của app): thực thi bất đồng bộ có polling, timeout co giãn theo số item, cache lạc quan ở client.",
       "Viết 44 route handler, 6 cron job và 19 migration SQL cho backend web; dựng hạ tầng xác thực OTP qua edge function gọi thẳng API Zalo (có SMS dự phòng), cờ tính năng kèm công tắc tắt khẩn cấp và luồng gộp tài khoản.",
@@ -110,7 +122,7 @@ export const experiences: Experience[] = [
     summary:
       "Người đóng góp nhiều nhất dự án, làm xuyên suốt từ frontend tới backend.",
     bullets: [
-      "Người đóng góp nhiều nhất dự án: 72 Pull Request (71 đã merge, chiếm 71% tổng PR) và 200 commit — phụ trách xuyên suốt frontend lẫn backend.",
+      "Người đóng góp nhiều nhất dự án: 71 Pull Request được merge, chiếm 71% tổng PR — phụ trách xuyên suốt frontend lẫn backend.",
       "Tự xây luồng thanh toán 2 cổng (OnePay, VNPay) end-to-end: tạo đơn, nhận kết quả từ cổng, cron đối soát giao dịch treo, chống trừ tiền hai lần khi tải lại trang; kèm hệ thống credit.",
       "Chẩn đoán và sửa lỗi retry chồng nhau qua 3 tầng: gộp về một tầng và đặt timeout dưới ngưỡng 60s của nền tảng — từ 12 lần gọi API/4 phút chờ còn 3 lần/75 giây.",
       "Xây lại xử lý lỗi cho 3 nhà cung cấp AI (Google, OpenAI, Fal.ai): thêm cơ chế thử lại và luân phiên khoá khi bị giới hạn tần suất; đưa lỗi thật ra giao diện song ngữ vi/en.",
@@ -147,35 +159,36 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "waguri-bot",
-    name: "Waguri Bot",
+    name: "Waguri",
     emoji: "🌸",
     featured: true,
     tagline:
-      "Discord bot kinh tế/nhập vai bản địa hóa Việt Nam — 72 lệnh, AI persona, thanh toán VietQR.",
+      "Website và cơ sở dữ liệu cho một game kinh tế trên Discord: web và bot dùng chung một DB PostgreSQL.",
     role: "Tác giả & lập trình viên duy nhất",
     year: "2026",
-    tech: ["discord.js v14", "Supabase / PostgreSQL", "Google Gemini", "Node.js", "Next.js"],
+    tech: ["Next.js 16", "React 19", "TypeScript", "Supabase / PostgreSQL", "Tailwind v4", "Node.js", "discord.js v14"],
     links: [
       { label: "Demo", href: "https://waguri-bot.vercel.app" },
       { label: "GitHub", href: "https://github.com/takeisan24/waguri-bot" },
     ],
     screenshot: "/projects/waguri.png",
     problem:
-      "Các cộng đồng Discord Việt thiếu một bot kinh tế/nhập vai thực sự bản địa hóa, có chiều sâu và cân bằng — phần lớn là bot ngoại, nội dung tiếng Anh, dễ lạm phát điểm.",
+      "Website và bot Discord cùng ghi vào một cơ sở dữ liệu. Nếu mỗi bên tự tính tiền và vật phẩm thì số liệu sẽ lệch, và hai yêu cầu cùng lúc có thể bị nhân đôi.",
     solution:
-      "Một hệ sinh thái game kinh tế hoàn chỉnh với vòng lặp 'làm việc → kiếm tiền → mua sắm/chế đồ → lên đời', cân bằng hardcore (năng lượng, mệt mỏi) và chống lạm phát bằng nhiều tầng tiêu hao (sink). Tích hợp AI persona trò chuyện và Premium thanh toán qua VietQR.",
+      "Đưa luật tiền và vật phẩm vào hàm PostgreSQL nguyên tử, web và bot chỉ gọi hàm. Bật RLS cho mọi bảng, siết quyền gọi hàm, và viết script chặn lỗi phân quyền cùng lệch schema tái phát.",
     contribution: [
-      "Thiết kế toàn bộ schema kinh tế trên Supabase/PostgreSQL (165 migration SQL); mọi thao tác tiền và kho đồ chạy nguyên tử ở tầng database để chống nhân đôi khi nhiều người thao tác cùng lúc.",
-      "Lập trình 72 lệnh: kiếm tiền, cửa hàng & chế tạo, nông trại & tiệm bánh, minigame, game nhiều người (Ma Sói, Loto), chợ giao dịch, quỹ tín dụng có kỳ hạn; chủ động cất kho 9 lệnh ít dùng để bot nhẹ và ít rủi ro hơn.",
-      "Tích hợp Google Gemini làm AI trò chuyện có persona; xây gói Premium thanh toán VietQR; tối ưu truy vấn xếp hạng bằng index cho đường truy vấn nóng.",
-      "Đưa ESLint vào codebase chưa từng có linter (lộ ngay 3 lỗi thật), viết 93 file test (572 test) và CI tự chạy mỗi lần đẩy code; kèm web dashboard Next.js (bảng xếp hạng, quản lý Premium).",
+      "Thiết kế DB 51 bảng đều bật RLS, 175 migration SQL; có 5 test race bắn nhiều lời gọi song song, kiểm không bị nhân đôi hay mất dữ liệu.",
+      "Rà phân quyền, phát hiện 75 hàm ghi dữ liệu gọi được bằng public key và thu hồi; hiện còn 6 trên 181 hàm mở cho public key, không hàm nào là SECURITY DEFINER.",
+      "Làm website 21 trang: đăng nhập Discord OAuth, dashboard, bảng xếp hạng, chợ, hồ sơ công khai, trang quản trị đơn Premium; thêm index để trang xếp hạng không quét toàn bảng.",
+      "Bảo mật web: chỉ tin Discord ID do OAuth ghi, kiểm quyền ở phía server, CSP/HSTS. Luồng mua Premium qua VietQR: giá lấy ở server, báo chuyển khoản chỉ có tác dụng một lần, duyệt tay.",
+      "Bot Node.js (discord.js 14) với 73 slash command, song ngữ vi/en; 822 test tự động trong 122 file; nhật ký và watchdog báo lỗi về Discord.",
     ],
     result:
-      "Sản phẩm đang vận hành thật trên {servers} máy chủ Discord với {members} thành viên và {players} người chơi (559/561 commit tự phát triển) — hệ thống quy mô lớn do một người xây, thể hiện tư duy thiết kế kinh tế ảo, xử lý đồng thời và chống lạm phát.",
+      "Đang vận hành thật trên {servers} máy chủ Discord với {players} tài khoản trong bot.",
     highlights: [
-      "Đang chạy thật: {servers} máy chủ · {members} thành viên · {players} người chơi",
-      "72 lệnh · 165 migration SQL · thao tác tiền/kho nguyên tử ở DB",
-      "AI persona (Gemini) + Premium VietQR · ESLint + CI + 572 test",
+      "Đang chạy thật: {servers} máy chủ · {players} tài khoản",
+      "51 bảng bật RLS · 175 migration SQL · tiền và vật phẩm ghi nguyên tử ở DB",
+      "Website Next.js 21 trang · Discord OAuth · 73 slash command · 822 test",
     ],
   },
   {
@@ -215,20 +228,19 @@ export const projects: Project[] = [
     name: "Cuộc Hẹn Nhỏ",
     emoji: "💌",
     featured: false,
-    cv: false,
     tagline:
-      "Studio thiệp mời hẹn hò phong cách tạp chí cổ điển — người nhận chọn giờ, chỗ, đồ uống và phản hồi 1 chạm qua Zalo/iMessage.",
+      "Studio thiệp mời hẹn hò phong cách tạp chí cổ điển — người nhận chọn giờ, chỗ, đồ uống và phản hồi.",
     role: "Tác giả & lập trình viên duy nhất",
     year: "2026",
-    tech: ["Next.js 16", "React 19", "Tailwind v4", "Supabase", "Framer Motion", "Web Audio API"],
+    tech: ["Next.js 16", "React 19", "Tailwind v4", "Vercel Blob", "Vitest"],
     links: [
       { label: "Demo", href: "https://cuochennho.vercel.app" },
       { label: "GitHub", href: "https://github.com/takeisan24/invitation-studio" },
     ],
     highlights: [
-      "Không cần đăng nhập · chia sẻ bằng link rút gọn hoặc QR · vé hẹn kiểu boarding pass",
-      "Mở phong bì, tiếng giấy và dấu sáp bằng Web Audio API · 4 bảng màu báo chí",
-      "Xuất lịch Apple/Google · thẻ story 9:16 · nhạc nền đĩa than",
+      "Gia cố API ghi: chặn request khác nguồn, giới hạn số request, lọc URL ảnh/nhạc theo host cho phép",
+      "Dialog có focus trap, đóng bằng Esc, khoá cuộn nền · Lighthouse accessibility trang chủ 87 → 93",
+      "71 test Vitest · cron hằng tuần dọn dữ liệu cũ",
     ],
   },
 ];

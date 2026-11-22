@@ -8,7 +8,7 @@ const facts = [
   {
     icon: Code2,
     title: "Tự xây sản phẩm hoàn chỉnh",
-    desc: "Từ ý tưởng đến vận hành: bot 72 lệnh, nền tảng AI, tích hợp thanh toán.",
+    desc: "Từ ý tưởng đến vận hành: website, cơ sở dữ liệu, bot Discord, tích hợp thanh toán.",
   },
   {
     icon: Sparkles,
