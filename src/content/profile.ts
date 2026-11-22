@@ -12,7 +12,7 @@ export const personal = {
     "Mới tốt nghiệp ngành CNTT (2026). Hơn 330 Pull Request đã merge trên sản phẩm production (web, mobile, backend); tự xây và vận hành website cùng cơ sở dữ liệu cho một game trên hơn 80 server Discord.",
   location: "Hà Nội, Việt Nam",
   avatar: "/avatar.jpg",
-  availability: "Sẵn sàng đi làm ngay · Onsite hoặc Remote",
+  availability: "Đang thực tập · Tìm vị trí Fresher/Junior · Onsite hoặc Remote",
 
   // Liên hệ — phone & địa chỉ chỉ dùng cho CV PDF, KHÔNG render thô trên web công khai
   email: "vutanh507@gmail.com",
