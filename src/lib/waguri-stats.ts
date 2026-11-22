@@ -9,8 +9,8 @@ const STATS_URL = "https://waguri-bot.vercel.app/api/bot/stats";
 
 export type WaguriStats = { servers: number; members: number; players: number };
 
-// Số đo tay gần nhất (09/10/2026) — dùng khi API không phản hồi.
-const FALLBACK: WaguriStats = { servers: 34, members: 3104, players: 956 };
+// Số đo tay gần nhất (22/11/2026) — dùng khi API không phản hồi.
+const FALLBACK: WaguriStats = { servers: 83, members: 5903, players: 1291 };
 
 const positive = (v: unknown) =>
   typeof v === "number" && Number.isFinite(v) && v > 0 ? v : null;
