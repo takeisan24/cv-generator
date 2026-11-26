@@ -12,7 +12,7 @@ export const personal = {
     "Mới tốt nghiệp ngành CNTT (2026). Hơn 330 Pull Request đã merge trên sản phẩm production (web, mobile, backend); tự xây và vận hành website cùng cơ sở dữ liệu cho một game trên hơn 80 server Discord.",
   location: "Hà Nội, Việt Nam",
   avatar: "/avatar.jpg",
-  availability: "Đang thực tập · Tìm vị trí Fresher/Junior · Onsite hoặc Remote",
+  availability: "Đang làm Developer full-time",
 
   // Liên hệ — phone & địa chỉ chỉ dùng cho CV PDF, KHÔNG render thô trên web công khai
   email: "vutanh507@gmail.com",
@@ -90,7 +90,7 @@ export const experiences: Experience[] = [
   {
     role: "Thực tập sinh Lập trình Frontend",
     org: "VietSoftware International (VSII)",
-    period: "10/2026 – nay",
+    period: "10/2026 – 11/2026",
     summary: "Thực tập mảng Frontend, làm theo ticket và review.",
     bullets: [
       "Dựng màn bản đồ mặt bằng tương tác bằng React 19 + TypeScript (OpenSeadragon): ảnh tile zoom sâu, xếp nhãn không chồng bằng R-tree, bộ lọc, tìm theo mã; lớp API tự làm mới token khi gặp 401; 72 test Vitest.",

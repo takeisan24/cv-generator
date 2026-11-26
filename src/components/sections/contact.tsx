@@ -31,7 +31,7 @@ export function Contact() {
           <SectionHeading
             index="05."
             title="Liên hệ"
-            subtitle="Mình đang tìm cơ hội thực tập / fresher. Rất vui được kết nối!"
+            subtitle="Rất vui được kết nối, trao đổi về dự án hoặc công nghệ!"
           />
         </Reveal>
 
