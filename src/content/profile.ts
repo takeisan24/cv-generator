@@ -88,6 +88,16 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    role: "Lập trình viên Fullstack",
+    org: "Đơn vị phát triển phần mềm · Hà Nội",
+    period: "11/2026 – nay",
+    summary: "Làm việc full-time theo quy trình ticket, merge request và code review.",
+    bullets: [
+      "Phát triển hệ thống quản lý học tập (LMS) cho khách hàng doanh nghiệp: web Next.js, API NestJS, làm theo merge request và code review.",
+    ],
+    tech: ["Next.js", "NestJS", "TypeScript", "MongoDB"],
+  },
+  {
     role: "Thực tập sinh Lập trình Frontend",
     org: "VietSoftware International (VSII)",
     period: "10/2026 – 11/2026",
